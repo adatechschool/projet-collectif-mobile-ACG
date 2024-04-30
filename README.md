@@ -5,5 +5,3 @@ API Alternance : https://api.gouv.fr/les-api/api-la-bonne-alternance
 Doc Expo Go : https://docs.expo.dev/get-started/create-a-project/
 
 Tutoriel React Native : https://www.youtube.com/watch?v=Y7rbJRjaYCY
-
-test

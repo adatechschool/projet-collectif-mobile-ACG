@@ -6,8 +6,8 @@ const ProfileScreen = ({ navigation }) => {
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <Text>Profile Screen</Text>
             <Button
-                title="Go to Home"
-                onPress={() => navigation.navigate('Home')}
+                title="Retourner à l'accueil"
+                onPress={() => navigation.navigate('Accueil')}
             />
         </View>
     );

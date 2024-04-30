@@ -1,0 +1,46 @@
+{
+    "offres": [
+        {
+            "id": 1,
+            "titre": "Développeur Web Junior",
+            "entreprise": "TechXpert",
+            "lieu": "Paris",
+            "type": "CDI",
+            "description": "Nous recherchons un développeur web junior passionné pour rejoindre notre équipe dynamique.",
+            "competences": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "date_publication": "2024-04-30"
+        },
+        {
+            "id": 2,
+            "titre": "Assistant Marketing Digital",
+            "entreprise": "MegaCorp",
+            "lieu": "Lyon",
+            "type": "Alternance",
+            "description": "MegaCorp cherche un étudiant motivé pour un poste d'assistant marketing digital en alternance.",
+            "competences": [
+                "Marketing",
+                "Réseaux sociaux",
+                "Analyse de données"
+            ],
+            "date_publication": "2024-04-29"
+        },
+        {
+            "id": 3,
+            "titre": "Designer UX/UI",
+            "entreprise": "CreativeWorks",
+            "lieu": "Berlin",
+            "type": "CDD",
+            "description": "CreativeWorks recherche un designer UX/UI créatif pour un contrat à durée déterminée.",
+            "competences": [
+                "Design d'interface",
+                "Prototypage",
+                "Expérience utilisateur"
+            ],
+            "date_publication": "2024-04-28"
+        }
+    ]
+}

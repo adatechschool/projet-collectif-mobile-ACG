@@ -40,7 +40,7 @@ const AccueilScreen = ({ navigation }) => {
         <View style={styles.container}>
             {/* En-tête */}
             <View style={styles.header}>
-                <Image source={require('../assets/Logo Contre Attaque.PNG')} style={styles.logo} />
+                <Image source={require('../assets/jobConnect.png')} style={styles.logo} />
                 <Text style={styles.appName}>Job Connect</Text>
                 {/* Lien vers le profil */}
                 <TouchableOpacity onPress={goToProfileScreen}>

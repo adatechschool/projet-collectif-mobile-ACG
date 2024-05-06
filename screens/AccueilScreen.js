@@ -23,7 +23,9 @@ const AccueilScreen = ({ navigation }) => {
     const goToProfileScreen = () => {
         navigation.navigate('Profil'); // Nom de la route vers la page de profil
     };
-  
+    const goToDetailsScreen = (offre) => {
+        navigation.navigate('OffreDetails', { offre }); // Nom de la route vers la page de détails de l'offre
+    };
 
     // Fonction pour rendre chaque élément de la liste d'offres
     const renderOffreItem = ({ item }) => (

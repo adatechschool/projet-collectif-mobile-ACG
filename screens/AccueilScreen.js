@@ -23,8 +23,8 @@ const AccueilScreen = ({ navigation }) => {
     const goToProfileScreen = () => {
         navigation.navigate('Profil'); // Nom de la route vers la page de profil
     };
-    const goToDetailsScreen = (offre) => {
-        navigation.navigate('OffreDetails', { offre }); // Nom de la route vers la page de détails de l'offre
+    const goToOffreScreen = (offre) => {
+        navigation.navigate('OffreScreen', { offre }); // Nom de la route vers la page de détails de l'offre
     };
 
     // Fonction pour rendre chaque élément de la liste d'offres
@@ -62,7 +62,18 @@ const AccueilScreen = ({ navigation }) => {
             {/* Liste des offres */}
             <FlatList
                 data={filteredOffres}
-                renderItem={renderOffreItem}
+                renderItem={({ item }) => (
+                    <TouchableOpacity onPress={() => goToOffreScreen(item)}>
+                        <View style={styles.offreContainer}>
+                            <View style={styles.offreItem}>
+                                <Text style={styles.offreTitre}>{item.titre}</Text>
+                                <Text>{item.entreprise}</Text>
+                                <Text>{item.lieu}</Text>
+                                <Text>{item.date_publication}</Text>
+                            </View>
+                        </View>
+                    </TouchableOpacity>
+                )}
                 keyExtractor={(item) => item.id.toString()}
             />
         </View>

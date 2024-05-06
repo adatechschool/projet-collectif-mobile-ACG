@@ -23,6 +23,7 @@ const AccueilScreen = ({ navigation }) => {
     const goToProfileScreen = () => {
         navigation.navigate('Profil'); // Nom de la route vers la page de profil
     };
+  
 
     // Fonction pour rendre chaque élément de la liste d'offres
     const renderOffreItem = ({ item }) => (

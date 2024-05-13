@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons'; // Import des icônes depuis Expo
 
 const OffreDetailsScreen = ({ route }) => {
     // Récupérer les données de l'offre sélectionnée depuis les paramètres de navigation
@@ -9,11 +10,9 @@ const OffreDetailsScreen = ({ route }) => {
         <View style={styles.container}>
             <Text style={styles.offreTitre}>{offre.titre}</Text>
             <View style={styles.infoContainer}>
-                <Text style={styles.label}>Entreprise:</Text>
+                <MaterialIcons name="business" size={24} color="#007bff" style={styles.icon} />
                 <Text style={styles.detail}>{offre.entreprise}</Text>
-            </View>
-            <View style={styles.infoContainer}>
-                <Text style={styles.label}>Lieu:</Text>
+                <MaterialIcons name="location-on" size={24} color="#007bff" style={[styles.icon, styles.locationIcon]} />
                 <Text style={styles.detail}>{offre.lieu}</Text>
             </View>
             <View style={styles.infoContainer}>
@@ -26,7 +25,9 @@ const OffreDetailsScreen = ({ route }) => {
             </View>
             <View style={styles.infoContainer}>
                 <Text style={styles.label}>Compétences requises:</Text>
-                <Text style={styles.detail}>{offre.competences}</Text>
+                {offre.competences.map((competence, index) => (
+                    <Text key={index} style={styles.competence}>{competence}</Text>
+                ))}
             </View>
             {/* Ajoutez d'autres détails de l'offre ici si nécessaire */}
         </View>
@@ -41,20 +42,38 @@ const styles = StyleSheet.create({
     },
     offreTitre: {
         fontWeight: 'bold',
-        fontSize: 24,
+        fontSize: 28,
         marginBottom: 20,
         textAlign: 'center',
+        color: '#007bff',
     },
     infoContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
         marginBottom: 15,
+        flexWrap: 'wrap',
     },
     label: {
         fontWeight: 'bold',
         fontSize: 18,
         marginBottom: 5,
+        color: '#343a40',
     },
     detail: {
         fontSize: 18,
+        marginLeft: 5,
+        color: '#495057',
+    },
+    competence: {
+        fontSize: 16,
+        marginLeft: 20,
+        color: '#007bff',
+    },
+    icon: {
+        marginRight: 5,
+    },
+    locationIcon: {
+        marginTop: 2, // Ajustement pour aligner la localisation avec le texte
     },
 });
 
